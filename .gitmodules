@@ -10,3 +10,6 @@
 [submodule "ext/rhtml"]
 	path = ext/rhtml
 	url = git://github.com/eschulte/rhtml.git
+[submodule "ext/xiki"]
+	path = ext/xiki
+	url = git@github.com:jxa/xiki.git
