@@ -1,3 +1,6 @@
 [submodule "ext/jxa-elisp"]
 	path = ext/jxa-elisp
 	url = git@github.com:jxa/elisp.git
+[submodule "ext/magit"]
+	path = ext/magit
+	url = git://gitorious.org/magit/mainline.git
