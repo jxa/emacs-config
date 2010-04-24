@@ -1,0 +1,3 @@
+[submodule "ext/jxa-elisp"]
+	path = ext/jxa-elisp
+	url = git@github.com:jxa/elisp.git
