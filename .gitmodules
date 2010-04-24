@@ -4,3 +4,6 @@
 [submodule "ext/magit"]
 	path = ext/magit
 	url = git://gitorious.org/magit/mainline.git
+[submodule "ext/mysnippets"]
+	path = ext/mysnippets
+	url = git@github.com:jxa/mysnippets.git
