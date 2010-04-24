@@ -7,3 +7,6 @@
 [submodule "ext/mysnippets"]
 	path = ext/mysnippets
 	url = git@github.com:jxa/mysnippets.git
+[submodule "ext/rhtml"]
+	path = ext/rhtml
+	url = git://github.com/eschulte/rhtml.git
