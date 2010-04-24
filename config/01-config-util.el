@@ -1,4 +1,4 @@
-(setq ja-extern-dir "~/.emacs.d/repo/")
+(setq ja-extern-dir "~/.emacs.d/ext/")
 (setq ja-emacswiki-dir "~/.emacs.d/emacswiki/")
 
 (add-to-list 'load-path ja-emacswiki-dir)

@@ -1,5 +1,1 @@
-(add-to-list 'load-path (extern-path "yasnippet"))
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory (extern-path "yasnippet/snippets"))
 (yas/load-directory (extern-path "mysnippets"))
