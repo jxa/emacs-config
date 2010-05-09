@@ -13,7 +13,7 @@
     (goto-char (point-min))
     (re-search-forward "^$" nil 'move)
     (eval-region (point) (point-max))
-    (kill-buffer (current-buffer))))a
+    (kill-buffer (current-buffer))))
 
 - install some packages
   - js2-mode

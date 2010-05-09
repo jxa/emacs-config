@@ -59,6 +59,28 @@
   (interactive)
   (other-window -1))
 
+(defun toggle-fullscreen () 
+  (interactive) 
+  (if (frame-parameter nil 'fullscreen)
+      (do-fullscreen)
+    (undo-fullscreen)))
+      
+
+(defun undo-fullscreen()
+  (progn
+    (set-frame-parameter nil 'fullscreen nil)
+    (if (frame-parameter nil 'jandrews-previous-x)
+        (progn
+          (set-frame-size (selected-frame) 
+                          (frame-parameter nil 'jandrews-previous-x)
+                          (frame-parameter nil 'jandrews-previous-y))))))
+
+(defun do-fullscreen ()
+  (progn
+    (set-frame-parameter nil 'jandrews-previous-x (frame-pixel-width))
+    (set-frame-parameter nil 'jandrews-previous-y (frame-pixel-height))
+    (set-frame-parameter nil 'fullscreen 'fullboth)))
+
 ;; show current column
 (column-number-mode 1)
 
@@ -69,3 +91,4 @@
     (message "TAGS command: %s" cmd)
     (shell-command cmd)
     (visit-tags-table tagfile)))
+

@@ -24,7 +24,6 @@
 ;; End of the el4r block.
 ;; User-setting area is below this line.
 
-
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -35,7 +34,8 @@
  '(font-lock-keywords-case-fold-search t t)
  '(global-font-lock-mode t nil (font-lock))
  '(js2-basic-offset 2)
- '(show-trailing-whitespace t)
+ '(show-trailing-whitespace t))
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
