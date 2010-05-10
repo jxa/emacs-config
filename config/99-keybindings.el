@@ -1,3 +1,5 @@
+(setq ns-command-modifier 'meta)
+
 (global-set-key (kbd "C-;") 'anything-at-point)
 (global-set-key "\M-n"      'duplicate-line)
 (global-set-key "\C-x\\"    'align-regexp)

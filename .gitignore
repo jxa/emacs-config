@@ -4,3 +4,6 @@ difflog.notes
 TAGS
 elpa/*
 *.elc
+*~
+\#*\#
+eproject.lst

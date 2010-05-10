@@ -19,7 +19,7 @@
 ; No line wrap by default
 (set 'default-truncate-lines t)
 
-;; enable copy / paste from other applications
+;; enable ocpy / paste from other applications
 (setq x-select-enable-clipboard t)
 
 ;; use y instead of yes
