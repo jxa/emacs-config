@@ -1,15 +1,15 @@
 [submodule "ext/jxa-elisp"]
 	path = ext/jxa-elisp
-	url = git@github.com:jxa/elisp.git
+	url = git://github.com/jxa/elisp.git
 [submodule "ext/magit"]
 	path = ext/magit
 	url = git://gitorious.org/magit/mainline.git
 [submodule "ext/mysnippets"]
 	path = ext/mysnippets
-	url = git@github.com:jxa/mysnippets.git
+	url = git://github.com/jxa/mysnippets.git
 [submodule "ext/rhtml"]
 	path = ext/rhtml
 	url = git://github.com/eschulte/rhtml.git
 [submodule "ext/xiki"]
 	path = ext/xiki
-	url = git@github.com:jxa/xiki.git
+	url = git://github.com/jxa/xiki.git
