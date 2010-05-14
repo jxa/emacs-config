@@ -13,11 +13,14 @@
 (define-key global-map (kbd "C-l") layout-keymap)
 ;; define commands like C-l C-n
 (define-key layout-keymap (kbd "C-l") 'recenter)
+(define-key layout-keymap (kbd "C-a") 'delete-other-windows)
 (define-key layout-keymap (kbd "C-n") 'other-window)
 (define-key layout-keymap (kbd "C-p") 'other-window-backward)
 (define-key layout-keymap (kbd "C-f") 'toggle-fullscreen)
 (define-key layout-keymap (kbd "C-c") 'split-window-vertically)
 (define-key layout-keymap (kbd "C-h") 'delete-window)
+(define-key layout-keymap (kbd "C-k") (lambda () (interactive) (kill-buffer)))
+(define-key layout-keymap (kbd "C-w") 'toggle-truncate-lines)
 
 ;; make a new prefix key, C-t
 (global-unset-key (kbd "C-t"))
@@ -25,5 +28,6 @@
 (define-key global-map (kbd "C-t") to-keymap)
 
 (define-key to-keymap (kbd "C-t") 'transpose-chars)
+(define-key to-keymap (kbd "C-a") 'beginning-of-line-text)
 (define-key to-keymap (kbd "C-h") 'beginning-of-buffer)
 (define-key to-keymap (kbd "C-l") 'end-of-buffer)
