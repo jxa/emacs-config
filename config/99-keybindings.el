@@ -14,6 +14,7 @@
 ;; define commands like C-l C-n
 (define-key layout-keymap (kbd "C-l") 'recenter)
 (define-key layout-keymap (kbd "C-a") 'delete-other-windows)
+(define-key layout-keymap (kbd "C-b") 'balance-windows)
 (define-key layout-keymap (kbd "C-n") 'other-window)
 (define-key layout-keymap (kbd "C-p") 'other-window-backward)
 (define-key layout-keymap (kbd "C-f") 'toggle-fullscreen)
@@ -31,3 +32,8 @@
 (define-key to-keymap (kbd "C-a") 'beginning-of-line-text)
 (define-key to-keymap (kbd "C-h") 'beginning-of-buffer)
 (define-key to-keymap (kbd "C-l") 'end-of-buffer)
+
+(define-key isearch-mode-map (kbd "C-v")
+  (lambda () (interactive) 
+    (goto-char isearch-opoint)
+    (insert isearch-string)))

@@ -39,7 +39,7 @@
  '(gud-gdb-command-name "gdb --annotate=1")
  '(js2-basic-offset 2)
  '(large-file-warning-threshold nil)
- '(show-trailing-whitespace t))
+ '(show-trailing-whitespace nil))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
