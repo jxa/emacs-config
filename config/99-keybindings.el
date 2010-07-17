@@ -33,7 +33,24 @@
 (define-key to-keymap (kbd "C-h") 'beginning-of-buffer)
 (define-key to-keymap (kbd "C-l") 'end-of-buffer)
 
-(define-key isearch-mode-map (kbd "C-v")
+;; isearch customizations
+
+(defun ja-isearch-current-match ()
+  (buffer-substring (match-beginning 0) (match-end 0)))
+
+(defvar isearch-paste-keymap (make-sparse-keymap "isearch-paste"))
+(define-key isearch-mode-map (kbd "C-v") isearch-paste-keymap)
+
+;; C-v C-v : paste isearch match
+(define-key isearch-paste-keymap (kbd "C-v")
   (lambda () (interactive) 
     (goto-char isearch-opoint)
-    (insert isearch-string)))
+    (insert (ja-isearch-current-match))
+    (isearch-done)))
+
+;; C-v C-v : paste isearch match as ruby string quoted var
+(define-key isearch-paste-keymap (kbd "C-s")
+  (lambda () (interactive) 
+    (goto-char isearch-opoint)
+    (insert (concat "#{" (ja-isearch-current-match) "}"))
+    (isearch-done)))
