@@ -33,6 +33,7 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(comint-process-echoes t)
+ '(egg-git-command "/usr/local/bin/git")
  '(face-font-family-alternatives (quote (("Monaco" "Bitstream Vera Sans Mono") ("arial black" "arial" "DejaVu Sans") ("arial" "DejaVu Sans") ("verdana" "DejaVu Sans"))))
  '(font-lock-keywords-case-fold-search t t)
  '(global-font-lock-mode t nil (font-lock))
@@ -49,3 +50,14 @@
  '(default ((t (:inherit nil :stipple nil :background "#3f3f3f" :foreground "#dcdccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "apple" :family "Monaco"))))
  '(erc-notice-face ((t (:foreground "SlateBlue" :weight light :height 0.7)))))
 
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

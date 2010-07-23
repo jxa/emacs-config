@@ -1,2 +1,2 @@
-(add-to-list 'load-path (extern-path "magit"))
-(require 'magit)
+;;(add-to-list 'load-path (extern-path "magit"))
+;;(require 'magit)

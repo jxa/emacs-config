@@ -1,7 +1,11 @@
 (add-to-list 'load-path (emacswiki-path "color-theme-6.6.0"))
 (add-to-list 'load-path (concat (emacswiki-path "color-theme-6.6.0") "/themes"))
 (require 'color-theme)
+(setq color-theme-load-all-themes nil)
+
 ;;(require 'zenburn)
 ;;(zenburn)
-(require 'color-theme-blackboard)
-(color-theme-blackboard)
+;;(require 'color-theme-blackboard)
+;;(color-theme-blackboard)
+(require 'color-theme-tangotango)
+(color-theme-tangotango)
