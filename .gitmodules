@@ -13,3 +13,6 @@
 [submodule "ext/jd-el"]
 	path = ext/jd-el
 	url = git://git.naquadah.org/~jd/jd-el.git
+[submodule "ext/rspec-mode"]
+	path = ext/rspec-mode
+	url = http://github.com/pezra/rspec-mode.git
