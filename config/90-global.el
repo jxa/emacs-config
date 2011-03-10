@@ -37,6 +37,9 @@
 ;; tilde-files should go to a different dir
 (setq backup-directory-alist '(("." . "/tmp/emacs/")))
 
+;; highlight parens 
+(show-paren-mode 1)
+
 ;; this fixes a bug in isearch replace - it doesn't replace current selection
 ;; Move cursor to beginning of match after search
 (add-hook 'isearch-mode-end-hook 'isearch-goto-beginning-after-finished)
@@ -75,11 +78,18 @@
                           (frame-parameter nil 'jandrews-previous-x)
                           (frame-parameter nil 'jandrews-previous-y))))))
 
-(defun do-fullscreen ()
+(defun do-fullscreen () 
   (progn
     (set-frame-parameter nil 'jandrews-previous-x (frame-pixel-width))
     (set-frame-parameter nil 'jandrews-previous-y (frame-pixel-height))
-    (set-frame-parameter nil 'fullscreen 'fullboth)))
+    (set-frame-position (selected-frame) 0 0)
+    (set-frame-size (selected-frame) 1000 1000)))
+
+;; (defun do-fullscreen ()
+;;   (progn
+;;     (set-frame-parameter nil 'jandrews-previous-x (frame-pixel-width))
+;;     (set-frame-parameter nil 'jandrews-previous-y (frame-pixel-height))
+;;     (set-frame-parameter nil 'fullscreen 'fullboth)))
 
 ;; show current column
 (column-number-mode 1)
@@ -87,7 +97,7 @@
 (defun generate-tags (tagfile)
   (interactive "DTag Dir:")
   (let* ((dir (file-name-directory tagfile))
-         (cmd (concat "cd " dir " && etags -R -o TAGS 2>/dev/null")))
+         (cmd (concat "cd " dir " && ctags -e -R . -o TAGS 2>/dev/null")))
     (message "TAGS command: %s" cmd)
     (shell-command cmd)
     (visit-tags-table tagfile)))

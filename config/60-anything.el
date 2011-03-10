@@ -7,14 +7,15 @@
 (require 'thing-cmds)
 
 (setq anything-sources
-      (list anything-c-source-buffers+
+      (list anything-c-source-ffap-guesser
+            anything-c-source-buffers+
+            anything-c-source-yaetags-select
             anything-c-source-file-name-history
             anything-c-source-files-in-current-dir+
             anything-c-source-ffap-guesser
             anything-c-source-complex-command-history
             ;; anything-c-source-ctags
             ;; anything-c-source-etags-select
-            anything-c-source-yaetags-select
             anything-c-source-kill-ring
             anything-c-source-fixme
             anything-c-source-locate))

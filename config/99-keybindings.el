@@ -22,6 +22,7 @@
 (define-key layout-keymap (kbd "C-h") 'delete-window)
 (define-key layout-keymap (kbd "C-k") (lambda () (interactive) (kill-buffer)))
 (define-key layout-keymap (kbd "C-w") 'toggle-truncate-lines)
+(define-key layout-keymap (kbd "C-j") 'join-line)
 
 ;; make a new prefix key, C-t
 (global-unset-key (kbd "C-t"))
@@ -54,3 +55,4 @@
     (goto-char isearch-opoint)
     (insert (concat "#{" (ja-isearch-current-match) "}"))
     (isearch-done)))
+
