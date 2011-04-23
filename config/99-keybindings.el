@@ -23,6 +23,7 @@
 (define-key layout-keymap (kbd "C-k") (lambda () (interactive) (kill-buffer)))
 (define-key layout-keymap (kbd "C-w") 'toggle-truncate-lines)
 (define-key layout-keymap (kbd "C-j") 'join-line)
+(define-key layout-keymap (kbd "C-s") 'rgrep)
 
 ;; make a new prefix key, C-t
 (global-unset-key (kbd "C-t"))

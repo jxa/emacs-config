@@ -19,3 +19,9 @@
 [submodule "ext/epresent"]
 	path = ext/epresent
 	url = git://github.com/technomancy/epresent.git
+[submodule "coffee-mode"]
+	path = ext/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule "ext/jade-mode"]
+	path = ext/jade-mode
+	url = https://github.com/brianc/jade-mode.git
